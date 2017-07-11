@@ -22,19 +22,13 @@ h1 {
 
 <script>
 function myFunction() {
-    document.getElementById("demo").innerHTML = "Hello";
+    document.getElementById("demo").innerHTML = "I was born on December 27, 2000 in El Camino Hospital. Growing up playing competitive tennis, I was determined to become a professional tennis player. My peak was when I was ranked #1 in the girl's division of Northen California. Then, I got tennis elbow and eventually quit competitive tennis. From this point on, I started trying new things such as basketball, swimming, joining the highschool tennis and badminton team, traveling to Japan by myself, making new friends, choosing to attend middle college, and joining the summer immersion Girl's Who Code program.";
+
 }
 
 </script>
-<p id="demo">"myself.jpg"</p>
-<img src="myself.jpg" width="70" height="104" onclick="myFunction()" >
-
-
-<h2>Biography</h2>
-<img src="myself.jpg" width="70" height="104">
-<p>
-I was born on December 27, 2000 in El Camino Hospital. Growing up playing competitive tennis, I was determined to become a professional tennis player. My peak was when I was ranked #1 in the girl's division of Northen California. Then, I got tennis elbow and eventually quit competitive tennis. From this point on, I started trying new things such as basketball, swimming, joining the highschool tennis and badminton team, traveling to Japan by myself, making new friends, choosing to attend middle college, and joining the summer immersion Girl's Who Code program.
-</p>
+<img src="myself.jpg" width="300" height="500" onclick="myFunction()" >
+<h2 id="demo">Biography</h2>
 <br>
 
 <h2> Likes</h2>
@@ -52,15 +46,45 @@ I was born on December 27, 2000 in El Camino Hospital. Growing up playing compet
   <p>
     First, my partner and I started by making a poster on thde features of the game. We decided that we will create a game that the character "Gobo" has to jump from moving blocks strategically to get to the top. After we created the outline we started hands-on scratch and started creating the game. One conflict we had was to make Gobo jump. We learned from another group how this is possible and were able to achieve it by using a while block. One thing I enjoyed about making this game was to design the game. Creating the image in my head onto the screen is very satisfying to achieve. We are not completely done and I would definitely add to it if we had more time.
   </p>
-  <img src="Gobo jump start.PNG" width="150" height="100" name="Gobojumpstart"
-onmouseover="Gobojumpstart='1000';Gobojumpstart.height='700';"
-onmouseout="Gobojumpstart.width='150';Gobojumpstart.height='100';" />
-  <img src="Gobo jump game.PNG" width="150" height="100" name="Gobojumpgame"
-onmouseover="Gobojumpgame='1000';Gobojumpgame.height='700';"
-onmouseout="Gobojumpgame.width='150';Gobojumpgame.height='100';" />
-  <img src="Gobo jump over.PNG" width="150" height="100" name="Gobojumpover"
-onmouseover="Gobojumpover='1000';Gobojumpover.height='700';"
-onmouseout="Gobojumpover.width='150';Gobojumpover.height='100';" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <body>
+
+  <div class="w3-container">
+    <h2>W3.CSS Modal Image Gallery</h2>
+    <p>Click on the images to display them in full size.</p>
+  </div>
+
+  <div class="w3-row-padding">
+    <div class="w3-container w3-third">
+      <img src="Gobo jump start.PNG" style="width:100%;cursor:pointer"
+      onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+    <div class="w3-container w3-third">
+      <img src="Gobo jump game.PNG" style="width:100%;cursor:pointer"
+      onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+    <div class="w3-container w3-third">
+      <img src="Gobo jump over.PNG" style="width:100%;cursor:pointer"
+      onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+  </div>
+
+  <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
+    <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+    <div class="w3-modal-content w3-animate-zoom">
+      <img id="img01" style="width:100%">
+    </div>
+  </div>
+
+  <script>
+  function onClick(element) {
+    document.getElementById("img01").src = element.src;
+    document.getElementById("modal01").style.display = "block";
+  }
+  </script>
+  
   <h2> Python </h2>
 
   <h3>Reflections</h3>
